@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
 }
-body{
-  font-family:"Nunito",arial,sans-serif;
+body {
+  font-family: "Nunito", arial, sans-serif;
 }
 body,
 h1,
@@ -34,6 +34,11 @@ img {
   padding: 32px;
   font-family: "MuseoModerno", arial, sans-serif;
 }
+.section-header-imagem {
+  background: url("../img/fundo-header.jpg") fixed;
+  background-size: cover;
+  height: 600px;
+}
 /* header */
 .header {
   display: flex;
@@ -44,7 +49,7 @@ img {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  margin: 8px 0px;
+  /* margin: 8px 0px; */
 }
 .menu a {
   padding: 10px;
@@ -90,6 +95,17 @@ img {
 }
 .sobre-conteudo h1 {
   color: #f5f5f5;
+  position: relative;
+}
+.sobre-conteudo h1::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(180deg, #761685 0%, #300237 100%);
+  position: absolute;
+  top: 60px;
+  left: 20px;
 }
 .sobre-conteudo p {
   font-size: 1.25rem;
@@ -112,6 +128,17 @@ img {
 .produto-bg h1 {
   color: #141414;
   padding: 60px;
+  position: relative;
+}
+.produto-bg h1::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(180deg, #761685 0%, #300237 100%);
+  position: absolute;
+  top: 85px;
+  left: 50px;
 }
 .produto {
   display: flex;
@@ -160,6 +187,17 @@ img {
 .servicos-bg h1 {
   color: #f5f5f5;
   padding: 60px;
+  position: relative;
+}
+.servicos-bg h1::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(180deg, #761685 0%, #300237 100%);
+  position: absolute;
+  top: 85px;
+  left: 45px;
 }
 .servicos {
   display: flex;
@@ -167,10 +205,11 @@ img {
 }
 .servicos-item {
   flex: 1 1 260px;
-  margin: 0 32px;
+  padding: 16px;
 }
 .servicos-item img {
   border-radius: 4px;
+  
 }
 .servicos-item h3 {
   margin: 16px 0px;
@@ -196,79 +235,111 @@ img {
 }
 /* depoimentos */
 
-.depoimentos-bg{
+.depoimentos-bg {
   background: #f5f5f5;
 }
-.depoimentos{
+.depoimentos-bg h1 {
+  position: relative;
+}
+.depoimentos-bg h1::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(180deg, #761685 0%, #300237 100%);
+  position: absolute;
+  top: 55px;
+  left: 20px;
+}
+.depoimentos {
   display: flex;
   flex-wrap: wrap;
 }
-.depoimentos-item{
+.depoimentos-item {
   flex: 1 1 260px;
   padding: 32px;
   text-align: center;
   max-width: 300px;
 }
-.depoimentos-item img{
+.depoimentos-item img {
   border-radius: 50%;
 }
-.depoimentos h3,p{
+.depoimentos h3,
+p {
   font-style: italic;
 }
 
 /* footer */
-.footer-bg{
+.footer-bg {
   background: #141414;
   color: #cccccc;
 }
-.footer-bg h1{
+.footer-bg h1 {
   color: #ffffff;
+  position: relative;
 }
-.footer-bg a{
+.footer-bg h1::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(180deg, #761685 0%, #300237 100%);
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+.footer-bg a {
   color: #ffffff;
   font-weight: bold;
 }
-.footer{
+.footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.footer-info p{
+.footer-info p {
   padding: 8px;
 }
-.footer-redes{
+.footer-redes {
   display: flex;
   gap: 32px;
   padding: 16px 0;
 }
-.footer-atendimento h3{
+.footer-atendimento h3 {
   color: #cccccc;
   font-size: 1.5rem;
 }
-.footer-atendimento p{
+.footer-atendimento p {
   padding: 8px 0;
   color: #f5f5f5;
 }
-@media (max-width:800px) {
-  .header{
+@media (max-width: 1000px) {
+  .header {
     justify-content: center;
   }
+  .sobre-conteudo h1::before,
+  .produto-bg h1::before,
+  .servicos-bg h1::before,
+  .depoimentos-bg h1::before,
+  .footer-bg h1::before {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
   .menu {
     justify-content: center;
   }
-  .titulo{
+  .titulo {
     text-align: center;
   }
-  .produto-conteudo h2{
+  .produto-conteudo h2 {
     text-align: center;
   }
   .servicos-item {
     max-width: 80%;
     margin: 0 auto;
   }
-  .depoimentos-item{
-   margin: auto;
+  .depoimentos-item {
+    margin: auto;
   }
 }
-
-
