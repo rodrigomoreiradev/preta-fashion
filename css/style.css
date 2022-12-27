@@ -207,6 +207,7 @@ img {
   flex: 1 1 260px;
   padding: 32px;
   text-align: center;
+  max-width: 300px;
 }
 .depoimentos-item img{
   border-radius: 50%;
@@ -248,7 +249,26 @@ img {
   padding: 8px 0;
   color: #f5f5f5;
 }
-
-
+@media (max-width:800px) {
+  .header{
+    justify-content: center;
+  }
+  .menu {
+    justify-content: center;
+  }
+  .titulo{
+    text-align: center;
+  }
+  .produto-conteudo h2{
+    text-align: center;
+  }
+  .servicos-item {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .depoimentos-item{
+   margin: auto;
+  }
+}
 
 
