@@ -35,25 +35,7 @@ img {
   font-family: "MuseoModerno", arial, sans-serif;
 }
 
-/* informaçoes superiores */
-.superinfo-bg {
-  background: #300237;
-}
-.superinfo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.superinfo p,
-.superinfo a {
-  color: #ffffff;
-  padding: 12px;
-  font-family: "MuseoModerno", arial, sans-serif;
-}
-.superinfo a:hover {
-  transform: scale(1.2);
-}
+
 /* header */
 .header {
   display: flex;
@@ -258,4 +240,19 @@ img {
   font-size: 1.25rem;
   font-weight: bold;
   padding: 8px;
+}
+.footerinfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerinfo p,
+.footerinfo a {
+  color: #ffffff;
+  padding: 12px;
+  font-family: "MuseoModerno", arial, sans-serif;
+}
+.footerinfo a:hover {
+  transform: scale(1.2);
 }
