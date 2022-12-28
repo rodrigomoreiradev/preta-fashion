@@ -34,11 +34,6 @@ img {
   padding: 32px;
   font-family: "MuseoModerno", arial, sans-serif;
 }
-.section-header-imagem {
-  background: url("../img/fundo-header.jpg") fixed;
-  background-size: cover;
-  height: 600px;
-}
 /* header */
 .header {
   display: flex;
@@ -49,11 +44,9 @@ img {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  /* margin: 8px 0px; */
 }
 .menu a {
   padding: 10px;
-  margin-right: 20px;
   font-size: 2rem;
   color: #333333;
   position: relative;
@@ -73,11 +66,14 @@ img {
 .menu a:hover::before {
   width: 90%;
 }
-
 /* seção salão imagem */
 .section-header-imagem {
   object-fit: cover;
-  margin: 32px auto 0;
+  margin: 0 auto;
+  background: url("../img/fundo-header.jpg") fixed;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
 }
 
 /* sobre */
@@ -87,9 +83,10 @@ img {
 .sobre {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .sobre-conteudo {
-  flex: 1 1 260px;
+  flex: 2 1 260px;
   padding: 32px;
   align-self: center;
 }
@@ -111,10 +108,9 @@ img {
   font-size: 1.25rem;
   line-height: 1.5;
   color: #cccccc;
-  min-width: 35ch;
 }
 .sobre-imagem {
-  flex: 1 2 300px;
+  flex: 1 1 300px;
   margin: 60px;
 }
 .sobre-imagem img {
@@ -143,26 +139,25 @@ img {
 .produto {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .produto-img {
-  flex: 1 2 260px;
-  max-width: 360px;
-  margin-left: 60px;
-  margin-bottom: 60px;
+  flex: 0 1 260px;
+  margin: 30px;
 }
 .produto-img img {
   border-radius: 4px;
 }
 .produto-conteudo h2 {
   font-size: 3rem;
-  margin: 32px;
+  margin: 16px;
 }
 .produto-conteudo p {
   font-size: 1.25rem;
   line-height: 1.4;
   color: #333333;
-  max-width: 40ch;
-  margin-left: 32px;
+  max-width: 35ch;
+  padding:8px;
 }
 .produto-conteudo a {
   display: inline-block;
@@ -202,9 +197,10 @@ img {
 .servicos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .servicos-item {
-  flex: 1 1 260px;
+  flex: 0 1 260px;
   padding: 16px;
 }
 .servicos-item img {
@@ -254,15 +250,19 @@ img {
 .depoimentos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .depoimentos-item {
-  flex: 1 1 260px;
+  flex: 0 1 260px;
   padding: 32px;
   text-align: center;
   max-width: 300px;
 }
 .depoimentos-item img {
   border-radius: 50%;
+}
+.depoimentos h3{
+  padding: 8px 0;
 }
 .depoimentos h3,
 p {
@@ -313,6 +313,8 @@ p {
   padding: 8px 0;
   color: #f5f5f5;
 }
+
+/* media */
 @media (max-width: 1000px) {
   .header {
     justify-content: center;
@@ -324,16 +326,30 @@ p {
   .footer-bg h1::before {
     display: none;
   }
+  .produto-img {
+    margin: 0 auto;
+    padding: 30px;
+  }
 }
 @media (max-width: 800px) {
   .menu {
     justify-content: center;
   }
+  .section-header-imagem{
+    height:300px;
+  }
   .titulo {
     text-align: center;
+    font-size: 3rem;
   }
-  .produto-conteudo h2 {
-    text-align: center;
+  .sobre-conteudo p,
+  .produto-conteudo p {
+    max-width: 260px;
+  }
+  .produto-conteudo a{
+    display: block;
+    max-width: max-content;
+    margin: 16px auto;
   }
   .servicos-item {
     max-width: 80%;
