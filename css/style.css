@@ -74,8 +74,18 @@ img {
   background-size: cover;
   max-width: 1600px;
   height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
-
+.section-header-imagem h2{
+  background: rgba(0,0,0,.5);
+  color: #ffffff;
+  padding: 32px;
+  border-radius: 4px 0 0 4px;
+  font-size: 3rem;
+  font-family: "MuseoModerno", arial, sans-serif;
+}
 /* sobre */
 .sobre-bg {
   background: #141414;
@@ -319,6 +329,10 @@ p {
   .header {
     justify-content: center;
   }
+  .section-header-imagem h2{
+    font-size: 1.5rem;
+    padding: 30px 50px;
+  }
   .sobre-conteudo h1::before,
   .produto-bg h1::before,
   .servicos-bg h1::before,
@@ -344,7 +358,8 @@ p {
   }
   .sobre-conteudo p,
   .produto-conteudo p {
-    max-width: 260px;
+    max-width: max-content;
+    text-align: center;
   }
   .produto-conteudo a{
     display: block;
